@@ -1,0 +1,76 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View Profile</li>
+  </ol>
+</nav>
+
+<div class="view-user p-5">
+  {{#each eye1}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h3>{{this.Name}}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Class Roll</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Hall</th>
+            <th scope="col">Batch</th>
+            <th scope="col">Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.Name}}</td>
+            <td>{{this.Phone}}</td>
+            <td>{{this.Email}}</td>
+            <td>{{this.Hall}}</td>
+            <td>{{this.Batch}}</td>
+            <td>{{this.Dept}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<br>
+<table class="table table-bordered">
+  <h2>All Activity performed by this student showing below:😎</h2>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Activity</th>
+      <th scope="col">Given Points</th>
+      {{!-- <th scope="col">Dept</th> --}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each eye2}}
+    <tr>
+      <th scope="row">{{this.Date}}</th>
+      <td>{{this.Activity}}</td>
+      <td>{{this.Points}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </table>
+
+
+    <br><br>
+    {{#each eye3}}
+    <h1>Total point:</h1>
+    <div class="card bg-info text-white">
+      <div class="card-body">{{this.Total}}</div>
+    </div>
+    {{/each}}
+    <br>

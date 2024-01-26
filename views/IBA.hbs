@@ -1,0 +1,33 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Here is the list of All IBA students</li>
+  </ol>
+</nav>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Roll</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Hall</th>
+      <th scope="col">Batch</th>
+      <th scope="col">Department</th>
+      {{!-- <th scope="col">Dept</th> --}}
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.Name}}</td>
+      <td>{{this.Phone}}</td>
+      <td>{{this.Email}}</td>
+      <td>{{this.Hall}}</td>
+      <td>{{this.Batch}}</td>
+      <td>{{this.Dept}}</td>
+    </tr>
+    {{/each}}
